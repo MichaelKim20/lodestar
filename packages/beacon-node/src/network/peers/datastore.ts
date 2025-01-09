@@ -32,7 +32,7 @@ export class Eth2PeerDataStore extends BaseDatastore {
 
   constructor(
     dbDatastore: LevelDatastore | string,
-    {threshold = 5, maxMemoryItems = 50}: {threshold?: number | undefined; maxMemoryItems?: number | undefined} = {}
+    {threshold = 5, maxMemoryItems = 50}: {threshold?: number; maxMemoryItems?: number} = {}
   ) {
     super();
 

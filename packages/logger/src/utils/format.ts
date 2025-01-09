@@ -32,7 +32,7 @@ function humanReadableLogFormat(opts: LoggerOptions): Format {
   return format.combine(
     ...(opts.timestampFormat?.format === TimestampFormatCode.Hidden ? [] : [formatTimestamp(opts)]),
     format.colorize(),
-    format.printf(humanReadableTemplateFn)
+    format.printf((info: any) => humanReadableTemplateFn(info))
   );
 }
 

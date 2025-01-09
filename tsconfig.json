@@ -13,6 +13,11 @@
     // `transpileOnly` mode for the `ts-node`. This change requires to treat types for each module 
     // independently, which is done by setting the `isolatedModules` flag to `true`.
     "isolatedModules": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@lodestar/*": ["packages/*/src"]
+    }
   },
   "ts-node": {
     "transpileOnly": true
